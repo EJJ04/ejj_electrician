@@ -53,6 +53,12 @@ AddEventHandler('ejj_elektriker:givereward', function()
                 iconColor = '#00FF00'
             })
 
+            sendToDiscord(
+                "Mission Fuldført",
+                "Spilleren `" .. xPlayer.getName() .. "` (ID: `" .. xPlayer.getIdentifier() .. "`) har gennemført en mission ved " .. locationLabel .. " og modtaget " .. kontanter .. " DKK.",
+                3066993 
+            )
+
             Citizen.Wait(1000)
             TriggerClientEvent('ejj_elektriker:startnymission', src)
         else
@@ -62,7 +68,7 @@ AddEventHandler('ejj_elektriker:givereward', function()
             sendToDiscord(
                 "Forsøg på snyd",
                 "Spilleren `" .. playerName .. "` (ID: `" .. playerIdentifier .. "`) forsøgte at få belønning uden for en gyldig mission lokation.",
-                16711680
+                16711680 
             )
 
             if Config.DropPlayer then
@@ -73,7 +79,7 @@ AddEventHandler('ejj_elektriker:givereward', function()
         sendToDiscord(
             "Ugyldigt ID forsøg",
             "Der blev forsøgt at få belønning med en ugyldig spiller ID `" .. src .. "`.",
-            16711680
+            16711680 
         )
     end
 end)
