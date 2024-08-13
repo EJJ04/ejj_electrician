@@ -10,6 +10,10 @@ Config.RewardType = 'item' -- item eller bank | item or bank
 
 Config.GiveKeys = true -- Sæt den til false hvis du ikke vil give nøgler | Set to false if you don't want to give keys
 
+Config.AllowedDistance = 10.0 -- Distancen skal have .0 | The distance must have .0
+Config.DropPlayer = true -- Sæt til true hvis spilleren skal kickes for snyd | Set to true if the player should be kicked for cheating
+Config.DiscordWebhookUrl = "https://discord.com/api/webhooks/YOUR_WEBHOOK_URL" -- Her sætter du dit webhook for discord logging | Here you set your webhook for discord logging
+
 -- Her kan du selv tilføjet flere lokationer | Here you can add more locations yourself
 Config.ElektrikerLokationer = {
 	{
